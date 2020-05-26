@@ -1,6 +1,6 @@
 eureka:
   instance:
-    hostname: 198.168.83.128:8761
+    hostname: eureka8761
   server:
     enable-self-preservation: false
   client:
