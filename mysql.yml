@@ -1,0 +1,11 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        druid:
+            connection-properties: config.decrypt=true;config.decrypt.key=${public-key}
+            filter:
+                config:
+                    enabled: true
+        password: root
+        #rup+Th6jWZE5G+NdemCvfr/nVrhAh/P3+wTaloJEdid4nKTMmD67Bfedl/etvPJLy4obNVJCcKjcYmzvrKt9Ag==
+        username: root
