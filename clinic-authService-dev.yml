@@ -1,0 +1,24 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: clinic-authService
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.83.128:8761/eureka/
+    registry-fetch-interval-seconds: 10
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+
+clinic:
+  jwt:
+    secret: leyou@Login(Auth}*^31)&heiMa% # 登录校验的密钥
+    pubKeyPath: C:\Temp\rsa\rsa.pub # 公钥地址
+    priKeyPath: C:\Temp\rsa\rsa.pri # 私钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: CLINIC_TOKEN
+feign:
+  hystrix:
+    enabled: true
